@@ -2,6 +2,10 @@
 
 A responsive, single-page website for a premium gym, built with plain HTML, CSS, and JavaScript. No build tools or server are required to run it locally.
 
+**Live site:** [iron-edge.netlify.app](https://iron-edge.netlify.app/)
+
+**Repository:** [Amaan-Shahid/DecodeLabs-Internship](https://github.com/Amaan-Shahid/DecodeLabs-Internship)
+
 ## Features
 
 - Responsive dark-and-gold design
@@ -45,7 +49,7 @@ Before publishing, update the contact details, opening hours, membership pricing
 
 ## Deployment
 
-The site can be deployed to GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any static web host. Test the contact form on the deployed site before launch.
+The site is deployed on [Netlify](https://www.netlify.com/) and is available at [iron-edge.netlify.app](https://iron-edge.netlify.app/). Pushes to the project repository can be deployed through Netlify's GitHub integration.
 
 ## Browser support
 
