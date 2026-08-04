@@ -1,4 +1,8 @@
-﻿# Iron Edge Gym API
+# Iron Edge Gym API
+
+**Live application:** [gym-website-umber-nine.vercel.app](https://gym-website-umber-nine.vercel.app/)
+
+**API health check:** [gym-website-umber-nine.vercel.app/api/health](https://gym-website-umber-nine.vercel.app/api/health)
 
 A full-stack contact-form project built with Node.js and Express. The application serves a responsive gym website and provides an API that receives, validates, and temporarily stores visitor enquiries.
 
@@ -120,7 +124,7 @@ This project includes `vercel.json` and `api/index.js`, which let Vercel run the
 4. Set the framework preset to **Other** and leave the build command blank.
 5. Click **Deploy**.
 
-After deployment, open the generated Vercel URL and test both the website and `/api/health`.
+After deployment, open the generated Vercel URL and test both the website and `/api/health`. The currently deployed application is available at [gym-website-umber-nine.vercel.app](https://gym-website-umber-nine.vercel.app/).
 
 ### Serverless data limitation
 
