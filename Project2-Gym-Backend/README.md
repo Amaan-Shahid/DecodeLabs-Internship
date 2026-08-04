@@ -110,14 +110,19 @@ Open `http://localhost:3000/api/enquiries` while the server is running to view a
 
 Enquiries are stored in an in-memory JavaScript array. They are lost whenever the server stops, restarts, or is redeployed. This is intentional for the current API-learning scope. A database and authenticated admin area would be needed before production use.
 
-## Deploying
+## Deploying to Vercel
 
-This is a Node.js web service, not a static-only website. Deploy it to a platform that runs Node.js, such as Render. Use the following settings:
+This project includes `vercel.json` and `api/index.js`, which let Vercel run the Express app as a serverless function while preserving the same website and API routes.
 
-| Setting | Value |
-| --- | --- |
-| Build command | `npm install` |
-| Start command | `npm start` |
-| Health check path | `/api/health` |
+1. Push this folder to GitHub.
+2. In Vercel, select **Add New -> Project** and import the GitHub repository.
+3. Set **Root Directory** to `Project2-Gym-Backend`.
+4. Set the framework preset to **Other** and leave the build command blank.
+5. Click **Deploy**.
 
-The server reads the `PORT` environment variable supplied by the hosting platform, with `3000` used locally. After deployment, test the site's contact form and `/api/health` at the public URL.
+After deployment, open the generated Vercel URL and test both the website and `/api/health`.
+
+### Serverless data limitation
+
+Vercel functions do not provide permanent in-memory storage. An enquiry accepted by `POST /api/enquiries` might not be available in a later `GET /api/enquiries` request, because Vercel can start a new function instance at any time. This project demonstrates API validation and request handling only. Use a database before treating submissions as durable data.
+

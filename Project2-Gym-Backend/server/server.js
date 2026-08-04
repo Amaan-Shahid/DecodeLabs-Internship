@@ -76,6 +76,11 @@ app.use("/api", (request, response) => {
   response.status(404).json({ success: false, message: "API route not found." });
 });
 
-app.listen(port, () => {
-  console.log(`Iron Edge is running at http://localhost:${port}`);
-});
+if (process.env.VERCEL !== "1") {
+  app.listen(port, "0.0.0.0", () => {
+    console.log(`Iron Edge is running at http://localhost:${port}`);
+  });
+}
+
+export default app;
+
